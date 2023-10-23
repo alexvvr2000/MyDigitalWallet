@@ -1,0 +1,96 @@
+.tarjeta {
+  background-color: white;
+  color: black;
+  &__texto-morado {
+    color: #bb27a7;
+    font-weight: bold;
+  }
+  &__contenedor {
+    display: grid;
+    grid-template-areas:
+      "vencimiento cvv"
+      "titular logo";
+    &__campo2 {
+      grid-area: vencimiento;
+    }
+    &__campo3 {
+      grid-area: cvv;
+      text-align: center;
+    }
+    &__campo4 {
+      grid-area: titular;
+    }
+    &__campo5 {
+      grid-area: logo;
+      ion-img {
+        height: 50px;
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+// sm
+@media only screen and (min-width: 0px) {
+  .tarjeta {
+    width: 300px;
+    &__titulo {
+      font-size: 1.6rem;
+    }
+    &__campo5 {
+      grid-area: logo;
+      ion-img {
+        height: 20px;
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+// m
+@media only screen and (min-width: 576px) {
+  .tarjeta {
+    width: 300px;
+    &__titulo {
+      font-size: 1.6rem;
+    }
+    &__campo5 {
+      grid-area: logo;
+      ion-img {
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+// lg
+@media only screen and (min-width: 768px) {
+  .tarjeta {
+    width: 330px;
+    &__titulo {
+      font-size: 1.8rem;
+    }
+    &__campo5 {
+      grid-area: logo;
+      ion-img {
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+// xl
+@media only screen and (min-width: 1200px) {
+  .tarjeta {
+    width: 330px;
+    &__titulo {
+      font-size: 1.8rem;
+    }
+    &__campo5 {
+      grid-area: logo;
+      ion-img {
+        box-sizing: content-box;
+      }
+    }
+  }
+}

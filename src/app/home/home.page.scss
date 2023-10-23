@@ -1,0 +1,50 @@
+ion-title {
+  text-align: center;
+}
+.btn[slot="fixed"] {
+  top: 80%;
+  right: 40px;
+}
+.btn {
+  --background: #bb27a7;
+  display: block;
+  height: 100px;
+  width: 100px;
+  transform: scale(0.5);
+}
+
+.tarjetas {
+  height: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tarjetas::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  margin: auto;
+}
+
+// xs
+@media only screen and (min-width: 0px) {
+  .slider {
+    width: 350px;
+  }
+}
+
+// sm
+@media only screen and (min-width: 576px) {
+  .slider {
+    width: 350px;
+  }
+}
+
+// md
+@media only screen and (min-width: 768px) {
+  .slider {
+    width: 380px;
+  }
+}

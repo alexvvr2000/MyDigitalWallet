@@ -1,0 +1,27 @@
+<ion-card class="tarjeta">
+  <ion-card-header>
+    <ion-card-title class="tarjeta__texto-morado tarjeta__titulo">{{
+      tarjeta.numeroTarjeta
+    }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="tarjeta__contenedor">
+    <div class="tarjeta__contenedor__campo2">
+      <ion-text
+        >Valid Thru
+        <span class="tarjeta__texto-morado">{{
+          obtenerFechaVencimiento()
+        }}</span></ion-text
+      >
+    </div>
+    <div class="tarjeta__contenedor__campo3">
+      <ion-text>CVV <span class="tarjeta__texto-morado">***</span></ion-text>
+    </div>
+    <div class="tarjeta__contenedor__campo4">
+      <ion-text>{{ tarjeta.titular }}</ion-text>
+    </div>
+    <div class="tarjeta__contenedor__campo5">
+      <ion-img [src]="urlLogoMarca()" [alt]="'Logo de ' + tarjeta.marca">
+      </ion-img>
+    </div>
+  </ion-card-content>
+</ion-card>

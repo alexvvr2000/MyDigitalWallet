@@ -1,0 +1,77 @@
+<div class="contenedor-formulario">
+  <div class="formulario">
+    <h1 class="formulario__titulo">Agrega una nueva tarjeta a tu cartera</h1>
+    <form [formGroup]="FormTarjeta" (ngSubmit)="submit()">
+      <div class="formulario__entradas">
+        <ion-grid>
+          <ion-row>
+            <ion-col
+              ><ion-input
+                label="Numero de tarjeta"
+                labelPlacement="floating"
+                fill="outline"
+                formControlName="numero"
+                type="number"
+              >
+              </ion-input>
+            </ion-col>
+            <ion-col>
+              <ion-input
+                label="CVV"
+                labelPlacement="floating"
+                fill="outline"
+                formControlName="ccv"
+                type="text"
+                placeholder="***"
+              >
+              </ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-select label="Mes" formControlName="mes">
+                  <ion-select-option *ngFor="let mes of meses" [value]="mes">{{
+                    mes
+                  }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <ion-select label="Año" formControlName="year">
+                  <ion-select-option
+                    *ngFor="let anio of anios"
+                    [value]="anio"
+                    >{{ anio }}</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-select label="Institucion" formControlName="banco">
+                <ion-select-option
+                  *ngFor="let banco of obtenerBancos()"
+                  [value]="banco"
+                  >{{ banco }}</ion-select-option
+                >
+              </ion-select>
+            </ion-col>
+            <ion-col>
+              <ion-input label="Titular" formControlName="titular"> </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <ion-button
+        type="submit"
+        class="formulario__submit"
+        shape="round"
+        [disabled]="!FormTarjeta.valid"
+        >Agregar tarjeta</ion-button
+      >
+    </form>
+  </div>
+</div>

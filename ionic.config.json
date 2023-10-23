@@ -1,0 +1,7 @@
+{
+  "name": "mydigitalwallet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

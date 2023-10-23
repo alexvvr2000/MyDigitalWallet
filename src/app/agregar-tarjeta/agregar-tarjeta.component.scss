@@ -1,0 +1,23 @@
+.contenedor-formulario {
+  margin: auto;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  &__submit {
+    --background: #bb27a7;
+    width: 100%;
+    margin-top: 100px;
+  }
+  &__titulo {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .formulario {
+    width: 400px;
+  }
+}

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> My Digital Wallet </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="tarjetas">
+    <ion-list class="slider">
+      <ng-template [ContenedorTarjetas]></ng-template>
+    </ion-list>
+  </div>
+  <ion-button shape="round" slot="fixed" class="btn" routerLink="/nuevaTarjeta">
+    <img src="../../assets/agregar.svg" class="btn__img" />
+  </ion-button>
+</ion-content>
